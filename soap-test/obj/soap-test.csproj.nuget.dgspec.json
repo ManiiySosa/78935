@@ -1,0 +1,71 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\guita\\OneDrive\\Escritorio\\feb_jul_2022\\Tecnologias para la integracion de soluciones\\78935\\soap-test\\soap-test.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\guita\\OneDrive\\Escritorio\\feb_jul_2022\\Tecnologias para la integracion de soluciones\\78935\\soap-test\\soap-test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\guita\\OneDrive\\Escritorio\\feb_jul_2022\\Tecnologias para la integracion de soluciones\\78935\\soap-test\\soap-test.csproj",
+        "projectName": "soap-test",
+        "projectPath": "C:\\Users\\guita\\OneDrive\\Escritorio\\feb_jul_2022\\Tecnologias para la integracion de soluciones\\78935\\soap-test\\soap-test.csproj",
+        "packagesPath": "C:\\Users\\guita\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\guita\\OneDrive\\Escritorio\\feb_jul_2022\\Tecnologias para la integracion de soluciones\\78935\\soap-test\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\guita\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "SoapCore": {
+              "target": "Package",
+              "version": "[1.1.0.26, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
