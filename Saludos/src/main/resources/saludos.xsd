@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="https://t4is.uv.mx/saludos"
+           xmlns:tns="http://t4is.uv.mx/saludos"
+           elementFormDefault="qualified">
+  <xs:element name="saludarRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombre" type="xs:string"/>
+      </xs:sequence>  
+    </xs:complexType>
+  </xs:element>  
+  <xs:element name="saludarResponse">
+     <xs:complexType>
+       <xs:sequence>
+         <xs:element name="respuesta" type="xs:string"/>
+       </xs:sequence>  
+     </xs:complexType>    
+  </xs:element> 
+  <xs:element name="buscarSaludosRequest"/>
+  <xs:element name="buscarSaludosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="saludos" maxOccurs="unbounded">
+        	<xs:complexType>
+              <xs:sequence>
+                <xs:element name="id" type="xs:int"></xs:element>
+                 <xs:element name="nombre" type="xs:string"></xs:element>
+              </xs:sequence>  
+            </xs:complexType>  
+        </xs:element>  
+      </xs:sequence>  
+    </xs:complexType>  
+  </xs:element>  
+  <xs:element name="modificarSaludoRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="id" type="xs:int"/>
+        <xs:element name="nombre" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="modificarSaludoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="respuesta" type="xs:boolean"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="borrarSaludoRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="id" type="xs:int"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="borrarSaludoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="respuesta" type="xs:boolean"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema> 
