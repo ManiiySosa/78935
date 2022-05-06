@@ -26,26 +26,18 @@ public class SaludarControlador {
         return "hola/saludar POST ";
     }
 
-    @GetMapping("/saludar1")
-    public Saludador saludarPath1(@PathVariable("XXX") String nombreX){
-        return new Saludador(nombreX);
     }
     @RequestMapping(value ="/saludar2/{nombre}", method = RequestMethod.GET)
     public String saludarPath2(@PathVariable String nombre){
         return "hola nombre="+nombre;
 
-    }
-    @GetMapping("/saludar1")
-    public Saludador saludarme1(@RequestParam(name="xx", defaultValue ="hola") String nombreX){
-        return new Saludador(nombreX);
-    }
     */
     List <Saludos> listaSaludos =new ArrayList<Saludos>();
     int id =1;
 
     //@RequestMapping(value= "/saludar/{nombre}", method= RequestMethod.GET)
     @GetMapping("/saludar")
-    public String saludar(@RequestParam(name="nombre", defaultValue="Escribe ?nombre= tunombre al termino de la direccion web" ) String nombre){
+    public String saludar(@RequestParam(name="nombre", defaultValue="Default" ) String nombre){
         Saludos saludo = new Saludos();
         saludo.setNombre(nombre);
         saludo.setId(id);
@@ -82,13 +74,15 @@ public class SaludarControlador {
 
     }
 
-    @RequestMapping(value= "/modificar/{id}/{nombre}", method= RequestMethod.GET)
-    public boolean modificarSaludo(@PathVariable int id, String nombre){
+    
+    @RequestMapping(value= "/modificar", method= RequestMethod.GET)
+   // @GetMapping("/modificar/id")
+    public boolean modificarSaludo(@RequestParam("id") int id ,@RequestParam(name="nombre") String nombre){
             boolean res = false;
             Saludos s = new Saludos();
             s.setId(id);
             s.setNombre(nombre);
-            listaSaludos.set(s.getId(), s);
+            listaSaludos.set(s.getId()-1, s);
             res = true;
 
             return res;
